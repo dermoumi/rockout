@@ -1,0 +1,65 @@
+@media screen and (min-width: 1025px) {
+    a {
+        -moz-transition-property: opacity;
+        -webkit-transition-property: opacity;
+        -o-transition-property: opacity;
+        transition-property: opacity;
+        -moz-transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+    }
+    
+    body, .loading-page {
+        text-shadow: black 0 2px 2px;
+    }
+
+    /* Title page
+     */
+    .v-title .nav-menu .nav-menu-item {
+        text-shadow: black 0 2px 2px, rgba(255, 255, 255, 0.5) 0 0 0, rgba(255, 255, 255, 0.5) 0 0 0;
+    }
+    .v-title .nav-menu .nav-menu-item.current-item {
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        text-shadow: black 0 2px 2px, rgba(255, 255, 255, 0) 40px 0 8px, rgba(255, 255, 255, 0) -40px 0 8px;
+    }
+    .v-title .control-tip {
+        -moz-transition: opacity 0.3s 3s;
+        -webkit-transition: opacity 0.3s 3s;
+        -o-transition: opacity 0.3s 3s;
+        transition: opacity 0.3s 3s;
+    }
+    .v-title .control-tip:hover {
+        -moz-transition: opacity 0.3s;
+        -webkit-transition: opacity 0.3s;
+        -o-transition: opacity 0.3s;
+        transition: opacity 0.3s;
+    }
+
+    /* Settings page :
+     */
+    .v-settings .ui-slider-handle span {
+        text-shadow: black 0 2px 2px, black 0 1px 2px;
+        -moz-transition-property: opacity;
+        -webkit-transition-property: opacity;
+        -o-transition-property: opacity;
+        transition-property: opacity;
+        -moz-transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+    }
+    .v-settings .nav-menu-item {
+        -moz-transition-property: background opacity;
+        -webkit-transition-property: background opacity;
+        -o-transition-property: background opacity;
+        transition-property: background opacity;
+        -moz-transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+    }
+}

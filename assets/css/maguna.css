@@ -1,0 +1,877 @@
+::selection, ::-moz-selection {
+    background: #440000;
+}
+
+@font-face {
+    font-family: "Prociono";
+    src: url('../fonts/Prociono.eot');
+    src: url('../fonts/Prociono.eot?iefix') format('eot'),
+         url('../fonts/Prociono.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Prociono.woff') format('woff'),
+         url('../fonts/Prociono.ttf') format('truetype'),
+         url('../fonts/Prociono.svg#ProcionoRegular') format('svg');
+}
+
+a {
+    opacity: 0.4;
+}
+a:hover, a:active, a.current-item {
+    opacity: 1;
+} 
+a:hover, a:active, a.current-item {
+    opacity: 1;
+} 
+
+.nav-menu-item, .nav-menu-item:hover {
+    opacity: 0.4;
+}
+.nav-menu-item.current-item {
+    opacity: 1 !important;
+}
+
+a {
+    color: #dddddd;
+    text-decoration: none;
+}
+
+ul, li, img, p {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body, .loading-page {
+    font-size: 100%;
+    font-family: "Prociono", serif;
+    background: black url("../img/bg.gif") center center no-repeat fixed;
+    color: #dddddd;
+    line-height: 1.5em;
+}
+
+.loading-page {
+    overflow: hidden;
+}
+
+.loading-page .loading-illust {
+    width: 540px;
+    height: 361px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -180px;
+    margin-left: -270px;
+    background: url('../img/waiting_illust.png') no-repeat;
+    z-index: 11000;
+}
+
+.loading-page .loading-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 540px;
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 170px;
+    z-index: 11001;
+    margin-left: -270px;
+    color: #FFF;
+    display: none;
+}
+
+input, select {
+    font-family: "Prociono", serif;
+}
+
+p {
+    text-indent: 2em;
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+*:focus {
+    outline: none;
+}
+
+/*
+ * Misc.
+ */
+h1 {
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 0.96em;
+    line-height: 1.3em;
+    color: #555555;
+    padding: 0 10px;
+    border-bottom: 1px solid #555555;
+    margin: 40px auto 1em auto;
+    max-width: 620px;
+}
+
+.padding-container {
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/*
+ * UI
+ */
+.ui-slider {
+    position: relative;
+    text-align: left;
+    height: 1.3em;
+    display: block;
+    margin: 0 2.1em;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    cursor: default;
+    background: white;
+    opacity: 1;
+    outline: none;
+}
+
+.backlink {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 1em;
+    background: #660000;
+    z-index: 100;
+}
+.backlink span {
+    display: block;
+    padding: 0.4em 1em;
+}
+@media screen and (max-width: 640px) {
+    .backlink {
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/*
+ * Title page
+ */
+.v-title {
+    text-align: center;
+    height: auto;
+}
+.v-title .nav-menu {
+    text-transform: capitalize;
+    font-variant: small-caps;
+    margin-bottom: 3em;
+}
+.v-title .nav-menu .nav-menu-item {
+    font-size: 2.1em;
+    line-height: 0.9em;
+    padding: 0.4em 0;
+    display: -moz-inline-box;
+    -moz-box-orient: vertical;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+}
+.v-title .nav-menu .nav-menu-item {
+    *display: inline;
+}
+.v-title .logo-container {
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+.v-title .logo-container img {
+    width: 100%;
+    max-width: 496px;
+}
+.v-title .userbar {
+    color: #888888;
+    position: absolute;
+    top: 1em;
+    right: 1.2em;
+    text-align: right;
+    font-size: 1.02em;
+    line-height: 0.9em;
+}
+.v-title .userbar a {
+    opacity: 0.7;
+}
+.v-title .userbar a:hover {
+    opacity: 1;
+}
+.v-title .bottom-links {
+    color: #555555;
+    position: absolute;
+    left: 0;
+    bottom: 1em;
+    width: 100%;
+    text-align: center;
+    opacity: 0.6;
+    font-size: 0.84em;
+}
+.v-title .control-tip {
+    background: url("../img/controltip.png") no-repeat left bottom;
+    width: 150px;
+    height: 56px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    opacity: 0.4;
+}
+.v-title .control-tip:hover {
+    opacity: 1;
+}
+@media screen and (max-width: 800px) {
+    .v-title .control-tip {
+        display: none;
+    }
+}
+
+/*
+ * Login page
+ */
+.v-login div.nav-menu-item,
+.v-login label.nav-menu-item,
+.v-login .submit-wrapper,
+.v-register div.nav-menu-item,
+.v-register label.nav-menu-item,
+.v-register .submit-wrapper,
+.v-song-create div.nav-menu-item,
+.v-song-create .submit-wrapper{
+    opacity: 1;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 8px 12px;
+    display: block;
+}
+.v-login .error-box,
+.v-register .error-box,
+.v-song-create .error-box {
+    color: #C37472;
+    text-indent: 0;
+    padding: 0;
+    margin: 0;
+    font-size: .8em;
+    line-height: 1.2em;
+    text-align: center;
+}
+.v-login div.nav-menu-item.text-input,
+.v-register div.nav-menu-item.text-input,
+.v-song-create div.text-input {
+    position: relative;
+}
+.v-login div.current-item,.v-login label.current-item,
+.v-register div.current-item, .v-register label.current-item,
+.v-song-create div.current-item {
+    background: rgba(0, 0, 0, .4);
+    border-radius: 3px;
+}
+.v-login form,
+.v-register form,
+.v-song-create form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.v-login input[type=submit],
+.v-register input[type=submit],
+.v-song-create input[type=submit] {
+    padding: 4px 2em;
+    font-size: 1.3em;
+    color: #FFF;
+    background: url("../img/playmode_button_bg.png");
+    border: 1px solid #532422;
+    -moz-box-shadow: inset #1f0c0c 0 0 1px, #2e0504 0 1px 1px, #160303 0 3px 0px, black 0 3px 5px;
+    -webkit-box-shadow: inset #1f0c0c 0 0 1px, #2e0504 0 1px 1px, #160303 0 3px 0px, black 0 3px 5px;
+    -o-box-shadow: inset #1f0c0c 0 0 1px, #2e0504 0 1px 1px, #160303 0 3px 0px, black 0 3px 5px;
+    box-shadow: inset #1f0c0c 0 0 1px, #2e0504 0 1px 1px, #160303 0 3px 0px, black 0 3px 5px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 2px;
+    margin-top: 0;
+    margin-bottom: 2px;
+    text-shadow: #130402 0 -2px 1px;
+}
+.v-login input[type=submit]:active,
+.v-register input[type=submit]:active,
+.v-song-create input[type=submit]:active {
+    color: #160303;
+    margin-bottom: 0;
+    margin-top: 2px;
+    background-color: rgba(0, 0, 0, 1);
+    -moz-box-shadow: #1f0c0c 0 0 1px, inset #2e0504 0 1px 1px, inset #160303 0 2px 0px, inset black 0 2px 5px;
+    -webkit-box-shadow: #1f0c0c 0 0 1px, inset #2e0504 0 1px 1px, inset #160303 0 2px 0px, inset black 0 2px 5px;
+    -o-box-shadow: #1f0c0c 0 0 1px, inset #2e0504 0 1px 1px, inset #160303 0 2px 0px, inset black 0 2px 5px;
+    box-shadow: #1f0c0c 0 0 1px, inset #2e0504 0 1px 1px, inset #160303 0 2px 0px, inset black 0 2px 5px;
+    opacity: 1;
+    text-shadow: #330402 0 -1px 0px;
+}
+.v-login .submit-wrapper,
+.v-register .submit-wrapper,
+.v-song-create .submit-wrapper {
+    text-align: right;
+}
+.v-login div label,
+.v-register div label,
+.v-song-create div label {
+    display: block;
+    padding: 0;
+    margin: 0 20px -2px 20px;
+    text-indent: 0;
+    font-size: .9em;
+    line-height: .9em;
+    position: relative;
+    z-index: 3;
+}
+.v-login input[type=text],
+.v-login input[type=password],
+.v-register input[type=text],
+.v-register input[type=password],
+.v-song-create input[type=text] {
+    color: #FFF;
+    display: block;
+    width: 100%;
+    margin-left: -5px;
+    position: relative;
+    padding: 4px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 1.2em;
+    border-radius: 2px;
+    border: 1px solid #331412;
+    background: rgba(0, 0, 0, .3);
+    z-index: 2;
+}
+.v-login input[type=text]:focus,
+.v-login input[type=password]:focus,
+.v-register input[type=text]:focus,
+.v-register input[type=password]:focus,
+.v-song-create input[type=text]:focus {
+    background: rgba(0, 0, 0, .3);
+    border: 1px solid #532422;
+    box-shadow: inset #000 0 2px 6px;
+}
+
+/*
+ * Settings page
+ */
+.v-settings .settings-block {
+    width: auto;
+    max-width: 620px;
+    padding: 40px 0;
+    margin: 0 auto;
+}
+.v-settings .ui-slider {
+    background: url("../img/slider_bg.png") no-repeat center center;
+    height: 32px;
+}
+.v-settings .ui-slider-handle {
+    background: url("../img/slider_handle.png") no-repeat center center;
+    width: 34px;
+    height: 34px;
+    margin-left: -17px;
+    text-align: center;
+    line-height: 0.6em;
+}
+.v-settings .ui-slider-handle span {
+    font-size: 0.6em;
+    padding: 1px;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+}
+.v-settings h2 {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    padding: 0 10px;
+    margin: 10px;
+    line-height: 1.3em;
+}
+.v-settings .caption {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin: 0 2em -0.1em 2em;
+}
+.v-settings .nav-menu-item {
+    margin: 0 10px;
+    padding: 0.2em 0.5em 0.6em 0.5em;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+}
+.v-settings .nav-menu-item.current-item {
+    background: rgba(0, 0, 0, 0.5);
+}
+.v-settings .nav-menu-item.current-item .ui-slider-handle span {
+    opacity: 1;
+}
+.v-settings #kb-layout-op {
+    margin: 0 2.6em;
+    overflow: hidden;
+    position: relative;
+}
+.v-settings #kb-layout-op .kb-nav {
+    text-align: center;
+    margin-top: 0.5em;
+    position: relative;
+}
+.v-settings #kb-layout-op .kb-choice {
+    float: left;
+    position: absolute;
+    clear: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.7em;
+    overflow: hidden;
+}
+.v-settings #kb-layout-op img {
+    max-width: 454px;
+    width: 100%;
+}
+.v-settings #ignore-input-op .yesno {
+    background: url("../img/yesno_bg.png") no-repeat center center;
+    max-width: 195px;
+    min-height: 33px;
+    height: 33px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 33px;
+}
+.v-settings #ignore-input-op .yesno a {
+    padding: 0 12px;
+    outline: none;
+    opacity: 0.3;
+}
+.v-settings #ignore-input-op .yesno a.current {
+    background: url("../img/yesno_current_bg.png") no-repeat bottom left;
+    border: 2px black solid;
+    padding: 0 10px;
+    opacity: 1;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+}
+.v-settings .settings-reset, .v-settings .settings-save {
+    display: block;
+    text-align: center;
+    padding: 0.2em;
+    margin: 0 0.5em;
+}
+.v-settings .settings-reset {
+    font-size: 1.2em;
+    margin-bottom: 0.7em;
+    padding: 0;
+    opacity: 0.4;
+}
+.v-settings .settings-save {
+    font-size: 2.1em;
+    margin-bottom: 0.2em;
+}
+
+/*
+ * playlist screen
+ */
+.v-playlists h1 {
+    margin: 40px auto 1em auto;
+    max-width: 620px;
+}
+.v-playlists .pl-item {
+    padding: 0 10px;
+    margin: 0 auto 1em auto;
+    max-width: 620px;
+}
+.v-playlists .pl-item h2 {
+    margin: 0;
+}
+.v-playlists .pl-item h2 a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.v-playlists .pl-item h2 a .title {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 22px;
+    padding: 0 20px;
+    background-size: 100% 40px !important;
+}
+.v-playlists .pl-item h2 a .title span {
+    display: block;
+    overflow: hidden;
+}
+.v-playlists .pl-item h2 a .left-border {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.v-playlists .pl-item h2 a .right-border {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.v-playlists .pl-item h2 a.global .title {
+    background: url("../img/playlist_title_global_bg.png") no-repeat center center;
+}
+.v-playlists .pl-item h2 a.global .left-border {
+    background: url("../img/playlist_title_global_brdr.png") no-repeat left center;
+}
+.v-playlists .pl-item h2 a.global .right-border {
+    background: url("../img/playlist_title_global_brdr.png") no-repeat right center;
+}
+.v-playlists .pl-item h2 a.custom .title {
+    background: url("../img/playlist_title_custom_bg.png") no-repeat center center;
+}
+.v-playlists .pl-item h2 a.custom .left-border {
+    background: url("../img/playlist_title_custom_brdr.png") no-repeat left center;
+}
+.v-playlists .pl-item h2 a.custom .right-border {
+    background: url("../img/playlist_title_custom_brdr.png") no-repeat right center;
+}
+.v-playlists .pl-item .loading {
+    margin: 0 20px 2px 20px;
+    padding: 0;
+    display: block;
+    width: auto;
+    text-align: center;
+    padding: 0.2em 10px;
+    background: rgba(0, 0, 0, 0.7);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+}
+.v-playlists .pl-item .pl-content {
+    display: none;
+    margin: 0 20px;
+}
+.v-playlists .pl-item .pl-filters {
+    padding: 3px;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+}
+.v-playlists .pl-item .pl-filters .filter-toggle {
+    background: black;
+    display: block;
+    padding: 0.2em 0.4em;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+}
+.v-playlists .pl-item .pl-filters ul {
+    padding: 3px 10px;
+    display: none;
+}
+.v-playlists .pl-item .pl-filters ul.closed {
+    display: none;
+}
+.v-playlists .pl-item .pl-filters ul li{
+    padding: 2px 0;
+}
+.v-playlists .pl-item .pl-filters ul select {
+    border: 1px #522622 solid;
+    border-radius: 3px;
+    background: #000;
+    color: #CCC;
+    padding: 2px;
+}
+.v-playlists .pl-item .pl-songs {
+    margin: 0;
+}
+.v-playlists .pl-item .pl-songs .loading {
+    margin: 0;
+}
+.v-playlists .pl-item .pl-songs .pl-more {
+    margin: 0.2em 0;
+    text-align: center;
+    display: block;
+}
+.v-playlists .pl-item .pl-songs .pl-song {
+    margin: 0.5em 0;
+    display: block;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+.v-playlists .pl-item .pl-songs .pl-song .difficulty {
+    left: 5px;
+    top: 2px;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    display: block;
+    background: white;
+    position: absolute;
+}
+.v-playlists .pl-item .pl-songs .pl-song .metadata {
+    display: block;
+    margin: -3px 40px 0 40px;
+    vertical-align: top;
+    padding-bottom: 6px;
+}
+.v-playlists .pl-item .pl-songs .pl-song .metadata .title {
+    display: block;
+    line-height: 1.2em;
+}
+.v-playlists .pl-item .pl-songs .pl-song .metadata .artist {
+    display: block;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    margin-top: -2px;
+    color: #888;
+}
+.v-playlists .pl-item .pl-songs .pl-song .rating {
+    right: 5px;
+    top: 2px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    display: block;
+    background: white;
+}
+
+/*
+ * Song screen
+ */
+.v-song h1 {
+    margin: 40px auto 1em auto;
+    max-width: 620px;
+}
+.v-song .metadata {
+    max-width: 600px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.v-song .buttons {
+    max-width: 600px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.v-song .play {
+    display: block;
+    margin: 10px 0;
+    overflow: auto;
+    padding: 10px;
+    background: url("../img/playmode_button_bg.png");
+    border: 1px solid #532422;
+    -moz-box-shadow: inset #1f0c0c 0 0 1px, #2e0504 0 1px 1px, #160303 0 3px 0px, black 0 3px 5px;
+    -webkit-box-shadow: inset #1f0c0c 0 0 1px, #2e0504 0 1px 1px, #160303 0 3px 0px, black 0 3px 5px;
+    -o-box-shadow: inset #1f0c0c 0 0 1px, #2e0504 0 1px 1px, #160303 0 3px 0px, black 0 3px 5px;
+    box-shadow: inset #1f0c0c 0 0 1px, #2e0504 0 1px 1px, #160303 0 3px 0px, black 0 3px 5px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    opacity: .4;
+}
+.v-song .play.current-item {
+    opacity: 1;
+}
+.v-song .play span {
+    display: block;
+}
+.v-song .play .title {
+    float: left;
+    bottom: 0;
+    left: 10px;
+    font-size: 40px;
+    margin: 20px 0;
+    display: inline-block;
+    text-align: center;
+    font-variant: small-caps;
+}
+.v-song .play .score-meta {
+    float: right;
+    right: 0;
+    padding: 0 20px;
+}
+.v-song .play .score {
+    position: relative;
+    z-index: 3;
+    font-size: 38px;
+}
+.v-song .play .score-caption {
+    position: relative;
+    z-index: 2;
+    line-height: 1em;
+    margin-top: 2px;
+    margin-bottom: -2px;
+    margin-left: -15px;
+    font-size: 0.8em;
+}
+.v-song .play .scorer {
+    position: relative;
+    z-index: 2;
+    text-align: right;
+    margin-top: 2px;
+    margin-right: 10px;
+}
+.v-song .play .scorer:before {
+    content: "by ";
+}
+
+/*
+ * Game screen
+ *
+ * I totally messed this part, it works but I don't know what i really did ^SD
+ */
+.v-game {
+    height: 100%;
+}
+.v-game .wrapper {
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+}
+.v-game .subwrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.v-game .container {
+    height: 100%;
+    background: black;
+    position: relative;
+    overflow: hidden;
+    background: black;
+    text-align: center;
+}
+.v-game .container div {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+.v-game .container #video-player iframe {
+    width: 100%;
+    height: 100%;
+}
+.v-game .container #video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.v-game .container #video-mask {
+    z-index: 4;
+    top: 0;
+    height: 100%;
+    background: #000;
+}
+.v-game .container #neck-canvas-wrapper {
+    z-index: 5;
+    text-align: center;
+    bottom: 0;
+    line-height: 0;
+}
+.v-game .container #back-canvas-wrapper {
+    z-index: 6;
+    text-align: center;
+    bottom: 0;
+    line-height: 0;
+}
+.v-game .container #stage-canvas-wrapper {
+    z-index: 7;
+    text-align: center;
+    bottom: 0;
+    line-height: 0;
+}
+.v-game .container #hud-canvas-wrapper {
+    z-index: 8;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    line-height: 0;
+}
+.v-game .container #pause-screen {
+    z-index: 9;
+    top: 0;
+    height: 100%;
+}
+.v-game .container #dim-screen {
+    z-index: 10;
+    background: #000;
+    top: 0;
+    height: 100%;
+}
+@media screen and (min-width: 640px) and (min-height: 480px) {
+    .v-game {
+        padding: 10px;
+    }
+    .v-game .wrapper, .v-game .container {
+        max-width: 920px;
+        max-height: 520px;
+    }
+    .v-game .container {
+        border: 1px solid #220000;
+/*
+        -moz-box-shadow: 0 2px 3px black;
+        -webkit-box-shadow: 0 2px 3px black;
+        -o-box-shadow: 0 2px 3px black;
+        box-shadow: 0 2px 3px black;
+*/
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -o-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -khtml-border-radius: 3px;
+        border-radius: 3px;
+    }
+}
+
+/*
+ * Song creation screen
+ */
+.v-song-create h1 {
+    max-width: 630px;
+}

@@ -1,0 +1,1 @@
+This a registration email, your acount is <?php echo $username; ?>.
